@@ -36,18 +36,21 @@ Effective inventory and sales management are critical in the retail sector. This
 ---
 <h2><a class="anchor" id="dataset"></a>Dataset</h2>
 
+
+The analysis is based on a curated dataset named `**vendor_sales_summary**`, which was derived from a much larger raw dataset. The original data contained **over 10 million (1 crore+) rows**, making it impractical to upload or analyze directly within this repository.
+
 - Multiple CSV files located in `/data/` folder (sales, vendors, inventory)
 - Summary table created from ingested data and used for analysis
-The analysis is based on a curated dataset named `**vendor_sales_summary**`, which was derived from a much larger raw dataset. The original data contained **over 10 million (1 crore+) rows**, making it impractical to upload or analyze directly within this repository.
 
 After data processing and aggregation, only the most relevant and analysis-ready dataset was retained.
 
 **Dataset Overview**
-- Rows: 10,693
-- Columns: 18
-- Granularity: Vendor and brand level performance summary
+- **Rows**: 10,693
+- **Columns**: 18
+- **Granularity**: Vendor and brand level performance summary
 
 **Key Columns Included**
+
 The dataset captures critical metrics related to vendor performance, sales, purchasing, and inventory efficiency, including:
 - Vendor and brand identifiers
 - Purchase and selling prices
