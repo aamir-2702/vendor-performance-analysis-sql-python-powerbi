@@ -38,6 +38,23 @@ Effective inventory and sales management are critical in the retail sector. This
 
 - Multiple CSV files located in `/data/` folder (sales, vendors, inventory)
 - Summary table created from ingested data and used for analysis
+The analysis is based on a curated dataset named `**vendor_sales_summary**`, which was derived from a much larger raw dataset. The original data contained **over 10 million (1 crore+) rows**, making it impractical to upload or analyze directly within this repository.
+
+After data processing and aggregation, only the most relevant and analysis-ready dataset was retained.
+
+**Dataset Overview**
+- Rows: 10,693
+- Columns: 18
+- Granularity: Vendor and brand level performance summary
+
+**Key Columns Included**
+The dataset captures critical metrics related to vendor performance, sales, purchasing, and inventory efficiency, including:
+- Vendor and brand identifiers
+- Purchase and selling prices
+- Sales and purchase quantities and values
+- Fright and excise costs
+- Gross profit and profit margin
+- Inventory turnover and sales-to-purchase ratios
 
 ---
 
@@ -73,30 +90,31 @@ vendor-performance-analysis/
 
 ---
 <h2><a class="anchor" id="data-cleaning--preparation"></a>Data Cleaning & Preparation</h2>
-
+To ensure reliable analysis, the dataset was filtered to remove non-representative records:
 - Removed transactions with:
   - Gross Profit ≤ 0
   - Profit Margin ≤ 0
   - Sales Quantity = 0
 - Created summary tables with vendor-level metrics
 - Converted data types, handled outliers, merged lookup tables
+This cleaning ensured the analysis focused on **profitable**, **completed transactions**, improving the accuracy of vendor performance and inventory insights.
 
 ---
 <h2><a class="anchor" id="exploratory-data-analysis-eda"></a>Exploratory Data Analysis (EDA)</h2>
-
+**Data Quality Issues**
 **Negative or Zero Values Detected:**
 - Gross Profit: Min -52,002.78 (loss-making sales)
 - Profit Margin: Min -∞ (sales at zero or below cost)
 - Unsold Inventory: Indicating slow-moving stock
 
 **Outliers Identified:**
-- High Freight Costs (up to 257K)
+- High Freight Costs (up to 257K) which is extreme high-cost shipments
 - Large Purchase/Actual Prices
 
 **Correlation Analysis:**
-- Weak between Purchase Price & Profit
-- Strong between Purchase Qty & Sales Qty (0.999)
-- Negative between Profit Margin & Sales Price (-0.179)
+- Weak relationship between Purchase Price & Profit
+- Strong alignment between Purchase Qty & Sales Qty (0.999), indicating efficient inventory movement
+- Negative relationship between Profit Margin & Sales Price (-0.179), is suggesting pricing pressure impacts margin
 
 ---
 <h2><a class="anchor" id="research-questions--key-findings"></a>Research Questions & Key Findings</h2>
