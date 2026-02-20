@@ -146,10 +146,10 @@ python scripts/get_vendor_summary.py
 
 <h2><a class="anchor" id="final-recommendations"></a>Final Recommendations</h2>
 
-- Diversify vendor base to reduce risk
-- Optimize bulk order strategies
+- Diversify vendor base to reduce dependency on top suppliers
+- Optimize bulk order strategies for maximum margin gains
 - Reprice slow-moving, high-margin brands
-- Clear unsold inventory strategically
+- Clear unsold inventory strategically to minimize holding costs
 - Improve marketing for underperforming vendors
 
 ---
