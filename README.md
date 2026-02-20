@@ -159,8 +159,7 @@ python scripts/get_vendor_summary.py
 Data Analyst  
 📧 Email: aamirzain2702@gmail.com  
 🔗 [LinkedIn](https://www.linkedin.com/in/md-aamir-raza-a6104820a/)
-# vendor-performance-analysis-sql-python-powerbi
-# vendor-performance-analysis-sql-pyt
+
 
 
 
